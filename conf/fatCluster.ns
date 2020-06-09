@@ -1,0 +1,108 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+#----------------------------------------------------------------------
+#Nodes
+set nodeMaster [$ns node]
+set nodeSlaveA [$ns node]
+set nodeSlaveB [$ns node]
+set nodeSlaveC [$ns node]
+set nodeSlaveD [$ns node]
+set nodeSlaveE [$ns node]
+set nodeSlaveF [$ns node]
+set nodeSlaveG [$ns node]
+set nodeSlaveH [$ns node]
+set nodeSlaveI [$ns node]
+set nodeSlaveJ [$ns node]
+set nodeSlaveK [$ns node]
+set nodeSlaveL [$ns node]
+set nodeSlaveM [$ns node]
+set nodeSlaveN [$ns node]
+set nodeSlaveO [$ns node]
+set nodeSlaveP [$ns node]
+set nodeSlaveQ [$ns node]
+set nodeSlaveR [$ns node]
+set nodeSlaveS [$ns node]
+set nodeSlaveT [$ns node]
+
+#Hardwares
+#tb-set-hardware $nodeMaster d430
+tb-set-hardware $nodeMaster d430
+tb-set-hardware $nodeSlaveA d430
+tb-set-hardware $nodeSlaveC d430
+tb-set-hardware $nodeSlaveD d430
+tb-set-hardware $nodeSlaveE d430
+tb-set-hardware $nodeSlaveF d430
+tb-set-hardware $nodeSlaveG d430
+tb-set-hardware $nodeSlaveH d430
+tb-set-hardware $nodeSlaveI d430
+tb-set-hardware $nodeSlaveJ d430
+tb-set-hardware $nodeSlaveK d430
+tb-set-hardware $nodeSlaveL d430
+tb-set-hardware $nodeSlaveM d430
+tb-set-hardware $nodeSlaveN d430
+tb-set-hardware $nodeSlaveO d430
+tb-set-hardware $nodeSlaveP d430
+tb-set-hardware $nodeSlaveQ d430
+tb-set-hardware $nodeSlaveR d430
+tb-set-hardware $nodeSlaveS d430
+tb-set-hardware $nodeSlaveB d430
+tb-set-hardware $nodeSlaveT d430
+
+#-----------------------------------------------------------------------
+#Lan
+set lan0 [$ns make-lan "$nodeMaster $nodeSlaveA $nodeSlaveB $nodeSlaveC $nodeSlaveD $nodeSlaveE $nodeSlaveF $nodeSlaveG $nodeSlaveH $nodeSlaveI $nodeSlaveJ $nodeSlaveK $nodeSlaveL $nodeSlaveM $nodeSlaveN $nodeSlaveO $nodeSlaveP $nodeSlaveQ $nodeSlaveR $nodeSlaveS $nodeSlaveT " 1000Mb 0ms]
+#-----------------------------------------------------------------------
+#OS
+#tb-set-node-os $nodeMaster UBUNTU16-64-STD
+tb-set-node-os $nodeMaster CENTOS7-64-STD
+tb-set-node-os $nodeSlaveA CENTOS7-64-STD
+tb-set-node-os $nodeSlaveB CENTOS7-64-STD
+tb-set-node-os $nodeSlaveC CENTOS7-64-STD
+tb-set-node-os $nodeSlaveD CENTOS7-64-STD
+tb-set-node-os $nodeSlaveE CENTOS7-64-STD
+tb-set-node-os $nodeSlaveF CENTOS7-64-STD
+tb-set-node-os $nodeSlaveG CENTOS7-64-STD
+tb-set-node-os $nodeSlaveH CENTOS7-64-STD
+tb-set-node-os $nodeSlaveI CENTOS7-64-STD
+tb-set-node-os $nodeSlaveJ CENTOS7-64-STD
+tb-set-node-os $nodeSlaveK CENTOS7-64-STD
+tb-set-node-os $nodeSlaveL CENTOS7-64-STD
+tb-set-node-os $nodeSlaveM CENTOS7-64-STD
+tb-set-node-os $nodeSlaveN CENTOS7-64-STD
+tb-set-node-os $nodeSlaveO CENTOS7-64-STD
+tb-set-node-os $nodeSlaveP CENTOS7-64-STD
+tb-set-node-os $nodeSlaveQ CENTOS7-64-STD
+tb-set-node-os $nodeSlaveR CENTOS7-64-STD
+tb-set-node-os $nodeSlaveS CENTOS7-64-STD
+tb-set-node-os $nodeSlaveT CENTOS7-64-STD
+#-----------------------------------------------------------------------
+#Routing
+$ns rtproto Static
+#-----------------------------------------------------------------------
+#Start Script
+tb-set-node-startcmd $nodeMaster "/users/apokhrel/templatesOld/startUpScriptMaster.sh"
+tb-set-node-startcmd $nodeSlaveA "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveB "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveC "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveD "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveE "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveF "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveG "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveH "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveI "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveJ "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveK "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveL "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveM "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveN "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveO "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveP "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveQ "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveR "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveS "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+tb-set-node-startcmd $nodeSlaveT "/users/apokhrel/templatesOld/startUpScriptSlave.sh"
+#-----------------------------------------------------------------------
+# Go!
+$ns run
+
